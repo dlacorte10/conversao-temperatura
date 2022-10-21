@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: conversao-temperatura
+  labels:
+    cor: v3
+spec:
+  containers:
+  - name: conversao-temperatura
+    image: dlacorte/conversao-temperatura:v3
+    ports:
+    - containerPort: 8080

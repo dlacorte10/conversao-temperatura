@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: replicaset-conv-temp
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: conversao-temperatura
+  template:
+    metadata:
+      labels:
+        app: conversao-temperatura
+    spec:
+      containers:
+      - name: site
+        image: dlacorte/conversao-temperatura:v3
+        ports:
+        - containerPort: 8080
