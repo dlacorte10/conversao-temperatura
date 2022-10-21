@@ -13,7 +13,7 @@ spec:
         app: conversao-temperatura
     spec:
       containers:
-      - name: site
+      - name: conversao-temperatura
         image: dlacorte/conversao-temperatura:v3
         ports:
         - containerPort: 8080
